@@ -31,6 +31,18 @@
                    template="trustedrating/calltoaction.phtml"
                    after="-" />
         </reference>
+        <!-- Moved from default: Min. requirements by TrustedShops: cms_index_index & checkout_onepage_success -->
+        <reference name="before_body_end">
+            <block type="trustedrating/trustbadge"
+                   name="trustedrating.trustbadge"
+                   after="-" />
+        </reference>
+        <reference name="right">
+            <block type="trustedrating/reviewsticker"
+                   name="trustedrating.reviewsticker"
+                   template="trustedrating/reviewsticker.phtml"
+                   after="cart_sidebar" />
+        </reference>
     </checkout_onepage_success>
 
     <trustedrating_email_calltoaction>
@@ -40,7 +52,7 @@
         </block>
     </trustedrating_email_calltoaction>
 
-    <default>
+    <!--<default>
         <reference name="before_body_end">
             <block type="trustedrating/trustbadge"
                    name="trustedrating.trustbadge"
@@ -52,5 +64,21 @@
                     template="trustedrating/reviewsticker.phtml"
                     after="cart_sidebar" />
         </reference>
-    </default>
+    </default>-->
+
+    <cms_index_index>
+        <!-- Moved from default: Min. requirements by TrustedShops: cms_index_index & checkout_onepage_success -->
+        <reference name="before_body_end">
+            <block type="trustedrating/trustbadge"
+                   name="trustedrating.trustbadge"
+                   after="-" />
+        </reference>
+        <reference name="right">
+            <block type="trustedrating/reviewsticker"
+                   name="trustedrating.reviewsticker"
+                   template="trustedrating/reviewsticker.phtml"
+                   after="cart_sidebar" />
+        </reference>
+    </cms_index_index>
+
 </layout>
